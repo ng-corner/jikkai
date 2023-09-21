@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "start",
+      "type": "bun",
+      "script": "ng serve",
       "isBackground": true,
       "problemMatcher": {
         "owner": "typescript",
@@ -21,8 +21,8 @@
       }
     },
     {
-      "type": "npm",
-      "script": "test",
+      "type": "bun",
+      "script": "ng test",
       "isBackground": true,
       "problemMatcher": {
         "owner": "typescript",
@@ -37,6 +37,6 @@
           }
         }
       }
-    }
+    },
   ]
 }
