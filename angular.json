@@ -11,7 +11,7 @@
         }
       },
       "root": "",
-      "sourceRoot": "src/app/root",
+      "sourceRoot": "src/app",
       "prefix": "app",
       "architect": {
         "build": {
@@ -28,8 +28,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
+              "src/app/favicon.ico",
+              "src/app/assets",
               {
                 "glob": "**/*",
                 "input": "node_modules/@taiga-ui/icons/src",
@@ -98,8 +98,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/app/favicon.ico",
+              "src/app/assets"
             ],
             "styles": [
               "src/styles.less"
