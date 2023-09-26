@@ -9,12 +9,9 @@
       <li>Топ 100</li>
     </ul>
   </nav>
-  <tui-input
-    formControlName="testValue"
-    tuiTextfieldSize="s"
-    tuiTextfieldIcon="tuiIconSearchLarge"
-  >
+  <tui-input [(ngModel)]="search" tuiTextfieldSize="s">
     Search Anime
-    <input autocomplete="email" tuiTextfield type="email" />
+    <input tuiTextfield type="text" />
+    <tui-svg src="tuiIconSearch"></tui-svg>
   </tui-input>
 </div>

@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { TuiDialogModule, TuiAlertModule, TuiButtonModule } from "@taiga-ui/core";
+import { TuiDialogModule, TuiAlertModule, TuiButtonModule, TuiSvgModule } from "@taiga-ui/core";
 import { TuiActionModule, TuiInputModule } from "@taiga-ui/kit";
 
 @NgModule({
@@ -8,14 +8,16 @@ import { TuiActionModule, TuiInputModule } from "@taiga-ui/kit";
     TuiAlertModule,
     TuiButtonModule,
     TuiActionModule,
-    TuiInputModule
+    TuiInputModule,
+    TuiSvgModule
   ],
   exports: [
     TuiDialogModule,
     TuiAlertModule,
     TuiButtonModule,
     TuiActionModule,
-    TuiInputModule
+    TuiInputModule,
+    TuiSvgModule,
   ],
 })
 export class TuiComponentsModule { }
