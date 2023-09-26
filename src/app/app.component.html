@@ -1,10 +1,6 @@
 <tui-root>
-  <h1>Hello from App</h1>
-  <button tuiButton type="button" class="tui-space_right-3 tui-space_bottom-3">Button</button>
-
-  <button icon="tuiIconStarLarge" tuiAction type="button" class="action">
-    And now for something completely different
-  </button>
-  <router-outlet></router-outlet>
-
+  <div style="max-width: 1200px; margin: 0 auto">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
 </tui-root>
