@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "dompurify"
+              "dompurify",
+              "text-mask-core"
             ],
             "outputPath": "dist/jikkai",
             "index": "src/index.html",
