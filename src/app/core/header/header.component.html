@@ -2,16 +2,11 @@
   <p>ANUME</p>
   <nav>
     <ul>
-      <li routerLink="/home">Главная</li>
-      <li routerLink="/about">Все аниме</li>
-      <li>Расписание</li>
-      <li>Рандом</li>
-      <li>Топ 100</li>
+      <li *ngFor="let item of menuItem">{{ item.tile }}</li>
     </ul>
   </nav>
   <tui-input [(ngModel)]="search" tuiTextfieldSize="s">
     Search Anime
     <input tuiTextfield type="text" />
-    <tui-svg src="tuiIconSearch"></tui-svg>
   </tui-input>
 </div>

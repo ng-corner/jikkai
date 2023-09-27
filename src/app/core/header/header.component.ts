@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent {
-  search: string = ''
-  constructor() { }
+  search: string = '';
+  menuItem = [
+    {tile:'Главная', routerLink:'/'},
+    {tile:'Все аниме', routerLink:'/'},
+    {tile:'Расписание', routerLink:'/'},
+    {tile:'Рандом', routerLink:'/'},
+    {tile:'Топ 100', routerLink:'/'},
+  ];
 }
