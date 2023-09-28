@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  styleUrls: ['./header.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  search: string = '';
+  title: string = 'jikkai';
   menuItem = [
-    {tile:'Главная', routerLink:'/'},
-    {tile:'Все аниме', routerLink:'/'},
-    {tile:'Расписание', routerLink:'/'},
-    {tile:'Рандом', routerLink:'/'},
-    {tile:'Топ 100', routerLink:'/'},
+    { title: 'Главная', routerLink: '/' },
+    { title: 'Все аниме', routerLink: '/' },
+    { title: 'Расписание', routerLink: '/' },
+    { title: 'Рандом', routerLink: '/' },
+    { title: 'Топ 100', routerLink: '/' },
   ];
+  searchForm = new FormGroup({
+    search: new FormControl('', Validators.required),
+  })
 }

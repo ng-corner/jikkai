@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TuiComponentsModule } from "./tui/tui.module";
 
 @NgModule({
-  imports: [TuiComponentsModule, FormsModule],
-  exports: [TuiComponentsModule, FormsModule],
+  imports: [TuiComponentsModule, FormsModule, ReactiveFormsModule],
+  exports: [TuiComponentsModule, FormsModule, ReactiveFormsModule],
 })
 export class SharedModule { }

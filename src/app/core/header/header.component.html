@@ -1,12 +1,19 @@
 <div class="header">
-  <p>ANUME</p>
+  <h3 class="tui-text_h3">{{title}}</h3>
   <nav>
     <ul>
-      <li *ngFor="let item of menuItem">{{ item.tile }}</li>
+      <li *ngFor="let item of menuItem">
+        <a [routerLink]="item.routerLink">{{item.title}}</a>
+      </li>
     </ul>
   </nav>
-  <tui-input [(ngModel)]="search" tuiTextfieldSize="s">
-    Search Anime
-    <input tuiTextfield type="text" />
-  </tui-input>
+  <!-- need refactor -->
+  <form [formGroup]="searchForm">
+    <tui-input formControlName="search" tuiTextfieldSize="s">
+      Search Anime
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <button tuiButton size="s" icon="tuiIconSearch" type="submit">
+    </button>
+  </form>
 </div>
