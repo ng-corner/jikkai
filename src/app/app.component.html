@@ -1,0 +1,7 @@
+<tui-theme-night *ngIf="theme.night | async"></tui-theme-night>
+<tui-root [tuiMode]="theme.mode">
+  <div class="app">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</tui-root>

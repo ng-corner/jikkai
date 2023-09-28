@@ -1,0 +1,22 @@
+<div class="header">
+  <h3 class="tui-text_h3">{{title}}</h3>
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuItem">
+        <a [routerLink]="item.routerLink">{{item.title}}</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- need refactor -->
+  <div class="right">
+    <form [formGroup]="searchForm">
+      <tui-input formControlName="search" tuiTextfieldSize="s">
+        Search Anime
+        <input tuiTextfield type="text" />
+      </tui-input>
+      <button tuiButton size="m" tuiIconButton icon="tuiIconSearch" type="submit">
+      </button>
+    </form>
+    <button tuiButton size="m" tuiIconButton icon="tuiIconMoon" (click)="theme.night.toggle()"></button>
+  </div>
+</div>
