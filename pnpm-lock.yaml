@@ -32,6 +32,9 @@ dependencies:
   '@angular/router':
     specifier: ^16.2.0
     version: 16.2.5(@angular/common@16.2.5)(@angular/core@16.2.5)(@angular/platform-browser@16.2.5)(rxjs@7.8.1)
+  '@schematics/angular':
+    specifier: ^16.2.3
+    version: 16.2.3
   '@taiga-ui/addon-doc':
     specifier: ^3.45.0
     version: 3.45.0(@angular/common@16.2.5)(@angular/core@16.2.5)(@angular/forms@16.2.5)(@angular/router@16.2.5)(@ng-web-apis/common@3.0.2)(@taiga-ui/addon-mobile@3.45.0)(@taiga-ui/cdk@3.45.0)(@taiga-ui/core@3.45.0)(@taiga-ui/kit@3.45.0)(@tinkoff/ng-polymorpheus@4.1.0)(rxjs@7.8.1)
@@ -2359,7 +2362,6 @@ packages:
       jsonc-parser: 3.2.0
     transitivePeerDependencies:
       - chokidar
-    dev: true
 
   /@sigstore/bundle@1.1.0:
     resolution: {integrity: sha512-PFutXEy0SmQxYI4texPw3dd2KewuNqv7OuK1ZFtY2fM754yhvG2KdgwIhRnoEE2uHdtdGNQ8s0lb94dW9sELog==}

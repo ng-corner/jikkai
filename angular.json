@@ -11,14 +11,15 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "src/app",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "dompurify"
+              "dompurify",
+              "text-mask-core"
             ],
             "outputPath": "dist/jikkai",
             "index": "src/index.html",
@@ -28,8 +29,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
+              "src/app/favicon.ico",
+              "src/app/assets",
               {
                 "glob": "**/*",
                 "input": "node_modules/@taiga-ui/icons/src",
@@ -98,8 +99,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/app/favicon.ico",
+              "src/app/assets"
             ],
             "styles": [
               "src/styles.less"
