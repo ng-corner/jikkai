@@ -8,12 +8,15 @@
     </ul>
   </nav>
   <!-- need refactor -->
-  <form [formGroup]="searchForm">
-    <tui-input formControlName="search" tuiTextfieldSize="s">
-      Search Anime
-      <input tuiTextfield type="text" />
-    </tui-input>
-    <button tuiButton size="s" icon="tuiIconSearch" type="submit">
-    </button>
-  </form>
+  <div class="right">
+    <form [formGroup]="searchForm">
+      <tui-input formControlName="search" tuiTextfieldSize="s">
+        Search Anime
+        <input tuiTextfield type="text" />
+      </tui-input>
+      <button tuiButton size="m" tuiIconButton icon="tuiIconSearch" type="submit">
+      </button>
+    </form>
+    <button tuiButton size="m" tuiIconButton icon="tuiIconMoon" (click)="theme.night.toggle()"></button>
+  </div>
 </div>

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NightThemeService } from '@feature/night-theme/night-theme.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
+  constructor(@Inject(NightThemeService) readonly theme: NightThemeService) { }
+
   title: string = 'jikkai';
   menuItem = [
     { title: 'Главная', routerLink: '/' },
@@ -19,4 +22,5 @@ export class HeaderComponent {
   searchForm = new FormGroup({
     search: new FormControl('', Validators.required),
   })
+
 }

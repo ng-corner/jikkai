@@ -18,7 +18,7 @@ import { HeaderComponent } from './core/header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     TuiRootModule,
-    SharedModule
+    SharedModule,
   ],
   bootstrap: [AppComponent]
 })
