@@ -15,7 +15,7 @@ export class HeaderComponent {
   menuItem = [
     { title: 'Главная', routerLink: '/' },
     { title: 'Все аниме', routerLink: '/' },
-    { title: 'Расписание', routerLink: '/' },
+    { title: 'Расписание', routerLink: '/calendar' },
     { title: 'Рандом', routerLink: '/' },
     { title: 'Топ 100', routerLink: '/' },
   ];
