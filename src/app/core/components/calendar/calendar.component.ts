@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ScheduleHttpService } from '@core/http/anime';
 import { Calendar } from '@core/model/anime';
 import { Observable, map } from 'rxjs';
 
@@ -27,15 +27,10 @@ export class CalendarComponent implements OnInit {
 
   anime$: Observable<Calendar[]> | null = null;
 
-  constructor(private http: HttpClient) { }
-
-  getCalendar(day: string): Observable<any> {
-    const url = `https://api.jikan.moe/v4/schedules?filter=${day}`
-    return this.http.get(url);
-  }
+  constructor(private schedulesHttpService: ScheduleHttpService) { }
 
   getAnimeByDay(day: string): void {
-    this.anime$ = this.getCalendar(day).pipe(map((response: any) => response.data))
+    this.anime$ = this.schedulesHttpService.getAnime(day).pipe(map((response: any) => response.data))
   }
 
   ngOnInit() {
