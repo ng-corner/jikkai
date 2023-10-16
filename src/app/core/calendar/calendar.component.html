@@ -1,26 +1,15 @@
 <div style="max-width: 1050px">
   <form class="group" [formGroup]="testForm">
     <div tuiGroup [collapsed]="true">
-      <tui-radio-block
-        *ngFor="let block of daysOfWeek"
-        contentAlign="right"
-        size="m"
-        [hideRadio]="true"
-        [item]="block"
-        formControlName="testValue"
-        class="radio-item"
-        (focusedChange)="Calendar(block.eng)"
-      >
+      <tui-radio-block *ngFor="let block of daysOfWeek" contentAlign="right" size="m" [hideRadio]="true" [item]="block"
+        formControlName="testValue" class="radio-item" (focusedChange)="getAnimeByDay(block.eng)">
         {{ block.ru }}
       </tui-radio-block>
     </div>
   </form>
   <div class="card">
-    <div
-      class="card-item"
-      *ngFor="let item of allAnime"
-      [style.backgroundImage]="'url(' + item.images.jpg.image_url + ')'"
-    >
+    <div class="card-item" *ngFor="let item of anime$ | async"
+      [style.backgroundImage]="'url(' + item.images.jpg.image_url + ')'">
       <p class="title">{{ item.title }}</p>
     </div>
   </div>
