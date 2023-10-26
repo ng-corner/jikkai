@@ -1,0 +1,9 @@
+<div style="max-width: 1050px">
+  <anime-card [anime]="anime$ | async"></anime-card>
+  <tui-pagination
+    [index]="index"
+    [length]="length"
+    (indexChange)="goToPage($event)"
+    (click)="Top100(index)"
+  ></tui-pagination>
+</div>

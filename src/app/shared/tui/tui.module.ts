@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
-import { TUI_SANITIZER, TuiAlertModule, TuiButtonModule, TuiDialogModule, TuiPrimitiveTextfieldModule, TuiSvgModule } from "@taiga-ui/core";
-import { TuiActionModule, TuiInputModule } from "@taiga-ui/kit";
+import { TUI_SANITIZER, TuiAlertModule, TuiButtonModule, TuiDialogModule, TuiGroupModule, TuiPrimitiveTextfieldModule, TuiSvgModule } from "@taiga-ui/core";
+import { TuiActionModule, TuiInputModule, TuiPaginationModule, TuiRadioBlockModule, TuiRadioModule } from "@taiga-ui/kit";
 import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
 
 @NgModule({
@@ -14,6 +14,9 @@ import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
     TuiInputModule,
     TuiSvgModule,
     TuiPrimitiveTextfieldModule,
+    TuiGroupModule,
+    TuiRadioBlockModule,
+    TuiPaginationModule
   ],
   exports: [
     TuiDialogModule,
@@ -22,7 +25,10 @@ import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
     TuiActionModule,
     TuiInputModule,
     TuiSvgModule,
-    TuiPrimitiveTextfieldModule
+    TuiPrimitiveTextfieldModule,
+    TuiGroupModule,
+    TuiRadioBlockModule,
+    TuiPaginationModule
   ],
   providers: [
     {

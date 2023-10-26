@@ -15,9 +15,9 @@ export class HeaderComponent {
   menuItem = [
     { title: 'Главная', routerLink: '/' },
     { title: 'Все аниме', routerLink: '/' },
-    { title: 'Расписание', routerLink: '/' },
+    { title: 'Расписание', routerLink: '/calendar' },
     { title: 'Рандом', routerLink: '/' },
-    { title: 'Топ 100', routerLink: '/' },
+    { title: 'Топ 100', routerLink: '/top100' },
   ];
   searchForm = new FormGroup({
     search: new FormControl('', Validators.required),
