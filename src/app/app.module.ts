@@ -8,15 +8,20 @@ import { SharedModule } from '@shared/shared.module';
 import { TuiRootModule } from "@taiga-ui/core";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalendarComponent } from './core/components/calendar/calendar.component';
+import { CalendarComponent } from '@core/pages/calendar/calendar.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { environment } from './environments/environment.development';
+import { Top100 } from '@core/pages/top100/top100.component';
+import { AnimeCard } from '@core/components/AnimeCard/animecard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CalendarComponent,
+    Top100,
+    AnimeCard
   ],
   providers: [
     { provide: ENVIRONMENT, useValue: environment },
@@ -28,7 +33,7 @@ import { environment } from './environments/environment.development';
     BrowserAnimationsModule,
     TuiRootModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })

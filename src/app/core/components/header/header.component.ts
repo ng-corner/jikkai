@@ -17,7 +17,7 @@ export class HeaderComponent {
     { title: 'Все аниме', routerLink: '/' },
     { title: 'Расписание', routerLink: '/calendar' },
     { title: 'Рандом', routerLink: '/' },
-    { title: 'Топ 100', routerLink: '/' },
+    { title: 'Топ 100', routerLink: '/top100' },
   ];
   searchForm = new FormGroup({
     search: new FormControl('', Validators.required),

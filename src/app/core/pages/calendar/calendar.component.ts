@@ -31,6 +31,7 @@ export class CalendarComponent implements OnInit {
 
   getAnimeByDay(day: string): void {
     this.anime$ = this.schedulesHttpService.getAnime(day).pipe(map((response: any) => response.data))
+
   }
 
   ngOnInit() {
